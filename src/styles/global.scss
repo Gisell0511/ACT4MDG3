@@ -1,0 +1,256 @@
+/* Root */
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/src/img/GISTASK.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Botón */
+button {
+    background-color: #ca5f08;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+button:hover {
+    background-color: #b33600;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #7a2500;
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+button:focus {
+    outline: 2px solid rgba(141, 56, 0, 0.539);
+}
+
+/* Add Task */
+.add-task {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ca5118ad;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.add-task button {
+    background-color: #7a2500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-task button:hover {
+    background-color: #ba4700;
+}
+
+/* See Task */
+.see-task {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e65406ce;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.see-task h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f9f9f9;
+}
+
+.no-tasks {
+    text-align: center;
+    font-size: 18px;
+    color: #f8f5f5;
+}
+
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.task-description {
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Welcome Page */
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #bd4800e0;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-page h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fbfbfb;
+}
+
+.welcome-page p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.start-button {
+    background-color: #ffffff;
+    color: rgb(178, 77, 0);
+    border: none;
+    border-radius: 26px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #ebdbcfd9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .add-task, .see-task {
+        padding: 15px;
+    }
+
+    .task-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .see-task h1 {
+        font-size: 24px;
+    }
+
+    .welcome-page h1 {
+        font-size: 30px;
+    }
+
+    .welcome-page p {
+        font-size: 16px;
+    }
+
+    .start-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-task, .see-task {
+        padding: 10px;
+    }
+
+    .task-list {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .see-task h1 {
+        font-size: 20px;
+    }
+
+    .welcome-page h1 {
+        font-size: 24px;
+    }
+
+    .welcome-page p {
+        font-size: 14px;
+    }
+
+    .start-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
