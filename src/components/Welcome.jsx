@@ -1,20 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-
+import React from 'react';
 const WelcomePage = ({ onStart }) => {
     return (
         <div className="welcome-page">
-            <h1>Bienvenido a GISETASK</h1>
-            <p>Gestiona tus tareas de manera eficiente 
-                <br></br>con nuestra aplicación.</p>
-            <button onClick={onStart} className="start-button">Empezar</button>
+            <div className="welcome-content">
+                <h1>Bienvenido a GISTASK</h1>
+                <p>Tu herramienta definitiva para gestionar tus tareas y proyectos de manera eficiente.</p>
+                <button className="start-button" onClick={onStart}>Comenzar</button>
+            </div>
         </div>
     );
-};
-
-WelcomePage.propTypes = {
-    onStart: PropTypes.func.isRequired,
 };
 
 export default WelcomePage;
